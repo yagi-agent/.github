@@ -58,6 +58,20 @@ A Vim / Neovim plugin for AI assistance using yagi.
 Plug 'yagi-agent/vim-yagi'
 ```
 
+## [yagi-discord-bot](https://github.com/yagi-agent/yagi-discord-bot)
+
+A Discord bot powered by yagi. Directly imports yagi's `engine` package as a Go library — no subprocess required.
+
+- **Per-user sessions** — Conversation history with automatic expiry and persistence
+- **Per-user memory** — Learn and recall information per Discord user
+- **Mention & prefix triggers** — Responds to `@yagi` mentions or `!` prefixed messages
+- **Multi-provider support** — Uses yagi's provider system (OpenAI, Anthropic, Gemini, etc.)
+
+```bash
+go build -o yagi-discord-bot
+DISCORD_BOT_TOKEN="your-token" ./yagi-discord-bot -model openai/gpt-4.1-nano
+```
+
 ## [yagi-profiles](https://github.com/yagi-agent/yagi-profiles)
 
 A shared repository of identities (personas), skills, and tools for yagi. Also referenced by actions-yagi.
